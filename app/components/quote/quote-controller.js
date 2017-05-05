@@ -2,11 +2,10 @@ function QuoteController() {
 
 	var qs = new QuoteService()
 
-	qs.getQuote(function (quote) {
+	function update(quoteData) {
+	}
+
+	qs.getQuote(function (quoteData) {
 		console.log('What is the quote', quote)
 	})
-
-	function update() {
-
-	}
 }
