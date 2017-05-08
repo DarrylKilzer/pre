@@ -4,7 +4,7 @@ function QuoteController() {
 
 	function update(quoteData) {
 		var elem = document.getElementById("quote")
-		elem.innerHTML = quoteData.quote
+		elem.innerHTML = `<h1><strong>${quoteData.quote}</strong></h1>`
 	}
 
 	qs.getQuote(function (quoteData) {
