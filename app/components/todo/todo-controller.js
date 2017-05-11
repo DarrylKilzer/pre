@@ -11,7 +11,7 @@ function TodoController() {
 		for (var i = 0; i < data.length; i++) {
 			var todo = data[i];
 			template += `
-					${todo} <button type="button" onclick="app.controllers.todoController.removeTodo('${todo}')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><br>
+					${todo} <button type="button" onclick="app.controllers.todoController.removeTodo('${todo}')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><br>cd
 				`
 		}
 		if (data.length > 0) {
@@ -19,27 +19,25 @@ function TodoController() {
 			todoTemplate = `
 			<h5>To do: ${todos}</h5>`
 		}
-		return elem.innerHTML = template + todoTemplate;
+		elem.innerHTML = template + todoTemplate;
+		document.getElementById('todo-input').value = ""
 	}
 
 	this.addTodoFromForm = function (e) {
 		e.preventDefault();
 		var form = e.target;
 
-		var todosArry = todoService.getTodos(form.todo.value);
-		todosArry.push(form.todo.value);
-		todoService.saveTodos(todosArry);
-		drawTodos(todosArry);
-	}
-
-	this.uncheck = function uncheck(todo) {
-		//debugger
-		for (var i = 0; i < todosArray.length; i++) {
-			var currentTodo = todosArray[i]
-			if (todo == currentTodo) {
-				todosArray.splice(currentTodo, 1);
-			}
-		}
+		var todosArray = todoService.getTodos(form.todo.value);
+		todosArray.push(form.todo.value);
+		todoService.saveTodos(todosArray);
+		todosList = todosArray
 		drawTodos(todosArray);
 	}
+
+	this.removeTodo = function removeTodo(todo) {
+		todosList = todoService.getTodos()
+		drawTodos(todosList);
+	}
+	todosList = todoService.getTodos()
+		drawTodos(todosList);
 }
