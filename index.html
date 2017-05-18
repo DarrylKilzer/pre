@@ -9,51 +9,18 @@
 </head>
 
 <body id="body">
-	<div class="container-fluid">
-		<div class="row">
-			<div id="weather">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h5 class="panel-title">To Do List</h5>
-					</div>
-					<div class="panel-body">
-						<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-							<input type="text" name="todo" placeholder="Add an Item" id="todo-input" />
-							<button  type="onclick">Add Todo</button>
-							<button  type="onclick">Add Remove</button>
-						</form>
-						<div id="todo">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-10 text-center">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h2 class="panel-title">
-							<div id="quote">
-							</div>
-						</h2>
-					</div>
-					<div class="panel-body">
-						<div class="col-xs-12 text-center">
-							<div id="clock" class="clock"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div id="weather">
 	</div>
-
-
-
-
+	<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+		<input type="text" name="todo" placeholder="Add an Item" id="todo-input" />
+		<button type="onclick">Add Todo</button>
+		<button type="onclick">Add Remove</button>
+	</form>
+	<div id="todo">
+	</div>
+	<div id="quote">
+	</div>
+	<div id="clock" class="clock"></div>
 	<!--JS Libraries-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<!--Services-->
