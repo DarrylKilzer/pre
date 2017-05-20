@@ -7,5 +7,11 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 button {
-  background-color: black
+  background-color: black;
+}
+#author{ 
+  opacity: 0;
+}
+#author:hover{
+  opacity: 1;
 }

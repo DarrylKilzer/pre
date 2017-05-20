@@ -9,18 +9,21 @@
 </head>
 
 <body id="body">
-	<div id="weather">
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div id="clock"></div>
+		</div>
+		<div class="col-xs-12 text-center">
+			<div id="weather"></div>
+		</div>
+		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+			<input type="text" name="todo" placeholder="Add an Item" id="todo-input" />
+			<button type="onclick">Add Todo</button>
+			<button type="onclick">Add Remove</button>
+		</form>
+		<div id="todo"></div>
+		<div id="quote"></div>
 	</div>
-	<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-		<input type="text" name="todo" placeholder="Add an Item" id="todo-input" />
-		<button type="onclick">Add Todo</button>
-		<button type="onclick">Add Remove</button>
-	</form>
-	<div id="todo">
-	</div>
-	<div id="quote">
-	</div>
-	<div id="clock" class="clock"></div>
 	<!--JS Libraries-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<!--Services-->
@@ -34,6 +37,7 @@
 	<script src="app/components/image/image-controller.js"></script>
 	<script src="app/components/quote/quote-controller.js"></script>
 	<script src="app/components/todo/todo-controller.js"></script>
+	<script src="app/components/clock/clockcontroller.js"></script>
 
 	<!--Initialize App-->
 	<script src="app/init.js"></script>
