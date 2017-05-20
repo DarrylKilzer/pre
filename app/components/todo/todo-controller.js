@@ -3,6 +3,7 @@ function TodoController() {
 	// There are two methods getTodos returns and array
 	// saveTodos accepts an array and stores it to your local storage
 	var todoService = new TodoService();
+	var todosList = todoService.getTodos()
 
 	function drawTodos(data) {
 		var elem = document.getElementById('todo');
@@ -35,9 +36,15 @@ function TodoController() {
 	}
 
 	this.removeTodo = function removeTodo(todo) {
-		todosList = todoService.getTodos()
+		for (var i = 0; i < todosList.length; i++) {
+			var curr = todosList[i]
+			if(todo == curr) {
+				todosList.splice(curr, 1);
+			}
+		}
+		todoService.saveTodos(todosList);
 		drawTodos(todosList);
 	}
-	todosList = todoService.getTodos()
+ 
 		drawTodos(todosList);
 }

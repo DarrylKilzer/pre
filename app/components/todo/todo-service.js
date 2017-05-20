@@ -15,15 +15,4 @@ function TodoService() {
 		localStorage.setItem('todo', JSON.stringify(todos));
 		console.log('Todo Data Saved:', todos);
 	}
-
-
-	this.removeTodo = function (todo) {
-		localStorage.removeItem('todo')
-		console.log('Todo Data Removed: ', todo)
-	}
-
-	this.clearTodos = function () {
-		localStorage.clear()
-		console.log('All Todos removed')
-	}
 }
