@@ -12,7 +12,7 @@ function TodoController() {
 		for (var i = 0; i < data.length; i++) {
 			var todo = data[i];
 			template += `
-					${todo} <button type="button" onclick="app.controllers.todoController.removeTodo('${todo}')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><br>cd
+					${todo} <button type="button" onclick="app.controllers.todoController.removeTodo('${todo}')"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button><br>
 				`
 		}
 		if (data.length > 0) {

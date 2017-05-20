@@ -10,7 +10,7 @@ function QuoteController() {
 			<div id="quote">
 				<h3><strong>${quoteData.quote}</strong></h3>
 				<h5 id="author">${quoteData.author}</h5>
-				
+			</div>
 		</div>
 		`
 	}
